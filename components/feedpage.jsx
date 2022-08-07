@@ -1,10 +1,13 @@
 import React from "react";
 import "../stylesheets/feedpage.css";
+import NavBar from "./navbar";
 
 function FeedPage() {
   return (
     <div className="feedpage">
-      <h1>Feed Page</h1>
+      <h1>FeedPage</h1>
+
+      <NavBar />
     </div>
   );
 }
