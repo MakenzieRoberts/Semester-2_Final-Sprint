@@ -1,0 +1,13 @@
+@import "./reset.css";
+
+header {
+	height: fit-content;
+}
+
+.logo-area {
+	height: 0px;
+}
+
+svg {
+	margin: 1.5% 0 0 1.5%;
+}

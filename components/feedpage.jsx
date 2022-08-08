@@ -1,7 +1,7 @@
 import "../stylesheets/feedpage.css";
 import React from "react";
 import { useLocation } from "react-router-dom";
-import NavBar from "./navbar";
+import NavBar from "./NavBar";
 
 function FeedPage() {
 	const location = useLocation();
