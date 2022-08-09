@@ -16,10 +16,9 @@ function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
 			<input type="text" id="username" placeholder="Username" />
 			<input type="text" id="pronouns" placeholder="Preferred Pronouns" />
 			<input type="text" id="bio" placeholder="Bio" />
-			{/* !KENZI : Fixed the button issue by nesting the button inside <Link> and changing 'onClick' to 'onSubmit' */}
-			<Link id="feed-link" to="/feed">
-				<button onSubmit={sendData}>Proceed</button>
-			</Link>
+			<button onClick={sendData}>
+				<Link to="/feed">Proceed</Link>
+			</button>
 		</div>
 	);
 }
