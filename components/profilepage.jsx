@@ -2,48 +2,24 @@ import "../stylesheets/profilepage.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function ProfilePage() {
-	const [usernameData, setUsernameData] = useState(null);
-	const [pronounData, setPronounData] = useState(null);
-	const [bioData, setBioData] = useState(null);
-
-	const storeUserData = async () => {
-		let usernameData = document.querySelector("#username").value;
-		let pronounData = document.querySelector("#pronouns").value;
-		let bioData = document.querySelector("#bio").value;
-		setUsernameData(usernameData);
-		setPronounData(pronounData);
-		setBioData(bioData);
-	};
-
+function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
+	function sendData(e) {
+		var un = document.querySelector("#username").value;
+		var pp = document.querySelector("#pronouns").value;
+		var bb = document.querySelector("#bio").value;
+		handleUserInfo(un, pp, bb);
+		e.preventDefault();
+	}
 	return (
 		<div className="profilepage">
 			<h1>Create Profile</h1>
-			<input
-				type="text"
-				id="username"
-				placeholder="Username"
-				onChange={storeUserData}
-			/>
-			<input
-				type="text"
-				id="pronouns"
-				placeholder="Preferred Pronouns"
-				onChange={storeUserData}
-			/>
-			<input type="text" id="bio" placeholder="Bio" onChange={storeUserData} />
-			<button type="submit" onSubmit={storeUserData}>
-				<Link
-					to="/feed"
-					state={{
-						username: usernameData,
-						pronouns: pronounData,
-						bio: bioData,
-					}}
-				>
-					Continue
-				</Link>
-			</button>
+			<input type="text" id="username" placeholder="Username" />
+			<input type="text" id="pronouns" placeholder="Preferred Pronouns" />
+			<input type="text" id="bio" placeholder="Bio" />
+			{/* !KENZI : Fixed the button issue by nesting the button inside <Link> and changing 'onClick' to 'onSubmit' */}
+			<Link id="feed-link" to="/feed">
+				<button onSubmit={sendData}>Proceed</button>
+			</Link>
 		</div>
 	);
 }

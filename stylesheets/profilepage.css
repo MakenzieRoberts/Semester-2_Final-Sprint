@@ -1,3 +1,13 @@
 .profilepage {
-  background-color: pink;
+	background-color: pink;
+}
+
+#feed-link {
+	width: 100%;
+}
+#link-text {
+	width: 100%;
+}
+Link {
+	width: 100%;
 }
