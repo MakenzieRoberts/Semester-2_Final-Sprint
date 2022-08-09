@@ -74,6 +74,12 @@
 	/*Controls border gradient width*/
 	width: 98%;
 }
+.profilepage textarea {
+	max-width: 280px;
+	min-width: 280px;
+	max-height: 280px;
+	min-height: 72px;
+}
 
 .profilepage input[type="text"] {
 	padding: 10px;
