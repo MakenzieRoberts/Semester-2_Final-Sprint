@@ -1,6 +1,7 @@
 import "../stylesheets/profilepage.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
 	function sendData(e) {
@@ -8,8 +9,14 @@ function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
 		var pp = document.querySelector("#pronouns").value;
 		var bb = document.querySelector("#bio").value;
 		handleUserInfo(un, pp, bb);
+		navigateToFeed();
 		e.preventDefault();
 	}
+	const navigate = useNavigate();
+
+	const navigateToFeed = () => {
+		navigate("/feed");
+	};
 	return (
 		<div className="profilepage">
 			<h1>Create Profile</h1>
