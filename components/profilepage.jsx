@@ -16,6 +16,7 @@ function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
 			<input type="text" id="username" placeholder="Username" />
 			<input type="text" id="pronouns" placeholder="Preferred Pronouns" />
 			<input type="text" id="bio" placeholder="Bio" />
+			{/* !KENZI: Keeping this kere for now while I see if I can make the full-button link work */}
 			<button onClick={sendData}>
 				<Link to="/feed">Proceed</Link>
 			</button>
