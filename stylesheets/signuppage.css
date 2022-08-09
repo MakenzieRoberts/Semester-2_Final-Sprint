@@ -41,7 +41,6 @@
 	flex-direction: column;
 	justify-content: space-between;
 	margin: auto;
-	height: 52vh;
 	max-height: 70vh;
 	min-width: fit-content;
 	overflow-y: auto;
@@ -56,7 +55,6 @@
 
 .signuppage #form-title {
 	height: 50px;
-	/* margin: 0 0 4% 0; */
 }
 .signuppage .form h2 {
 	font-size: 32pt;

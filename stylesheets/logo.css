@@ -1,13 +1,16 @@
 @import "./reset.css";
 
 header {
-	height: fit-content;
-}
-
-.logo-area {
-	height: 0px;
+	height: 0;
 }
 
 svg {
 	margin: 1.5% 0 0 1.5%;
+}
+
+@media screen and (max-height: 550px) {
+	header {
+		height: 0;
+		visibility: hidden;
+	}
 }
