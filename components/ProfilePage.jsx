@@ -39,11 +39,6 @@ function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
 						</Link>
 					</button>
 				</div>
-				<div id="login-message">
-					<p>
-						Don't have an account yet? <span id="login-link">Sign Up!</span>
-					</p>
-				</div>
 			</form>
 		</div>
 	);

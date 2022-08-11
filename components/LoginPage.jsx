@@ -25,8 +25,8 @@ const LoginPage = () => {
 				<div id="login-message">
 					<p>
 						Don't Have an Account?{" "}
-						<Link class="login" to="/login">
-							Sign Up
+						<Link class="signup" to="/login">
+							Sign Up!
 						</Link>
 					</p>
 				</div>
