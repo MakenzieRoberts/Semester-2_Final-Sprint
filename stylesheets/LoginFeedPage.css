@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700&display=swap");
+
+.loginfeedpage {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.loginfeedpage .navbar {
+  color: white;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginfeedpage .navbar h1 {
+  font-weight: 300;
+  font-size: 15pt;
+}
+
+.loginfeedpage #user {
+  border: 1px solid grey;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 150px;
+  margin: 10px;
+}
+
+.loginfeedpage .feed {
+  background-color: white;
+  margin: 30px;
+}
+
+.loginfeedpage #userpicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: "10px";
+  height: "10px";
+}
+
+.loginfeedpage #userinfo {
+  display: flex;
+  align-items: center;
+}
+
+.loginfeedpage form {
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin: 10px;
+  height: 150px;
+}
+
+.loginfeedpage textarea {
+  border: none;
+  height: 95%;
+  width: 95%;
+  padding: 7px;
+}
+
+.loginfeedpage button {
+  float: right;
+}
+
+.loginfeedpage button {
+  background-image: linear-gradient(
+    to right,
+    #63d9a0 0%,
+    #9e0de7 50%,
+    #63d9a0 100%
+  );
+
+  background-size: 200% auto;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 20px #eee;
+  width: 150px;
+  height: 25px;
+
+  display: block;
+  line-height: 5px;
+
+  text-align: center;
+  transition: 0.4s;
+
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.5s;
+}
+.loginfeedpage button:hover {
+  background-position: right center;
+}
+
+.loginfeedpage .button-text,
+button {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.loginfeedpage .newpost {
+  border: 1px solid grey;
+  border-radius: 6px;
+  margin: 10px;
+  height: 200px;
+}
+
+.loginfeedpage #newpostuser {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  height: 100px;
+}
+
+.loginfeedpage #newpostpic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: "10px";
+  height: "10px";
+}
+.loginfeedpage #newpostuserinfo {
+  display: flex;
+  align-items: center;
+}
+
+.loginfeedpage #newpostcontent {
+  margin: 10px;
+}
+
+.loginfeedpage #newpostdate {
+  font-size: 0.5rem;
+}
