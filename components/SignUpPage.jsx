@@ -1,4 +1,5 @@
 import "../stylesheets/signuppage.css";
+import Logo from "./Logo";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -76,6 +77,7 @@ const SignUpPage = () => {
 
 	return (
 		<div className="signuppage">
+			<Logo />
 			{/* so here I wanted to see all the values so I used an onSubmit listener and called it handleSubmit */}
 			<form class="form" onSubmit={handleSubmit}>
 				<div id="form-title">

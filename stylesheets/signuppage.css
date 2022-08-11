@@ -127,10 +127,6 @@
 	text-align: center;
 	transition: 0.4s;
 	width: 100%;
-	-moz-transition: 0.4s;
-	-ms-transition: 0.4s;
-	-o-transition: 0.4s;
-	-webkit-transition: 0.4s;
 	-webkit-transition: 0.5s;
 }
 .signuppage button:hover {
@@ -155,4 +151,11 @@ button {
 	color: #9e0de7;
 	font-weight: 700;
 	text-decoration: underline;
+}
+
+@media screen and (max-height: 300px) {
+	.signuppage .logo-area img {
+		/* width: 100px; */
+		visibility: hidden;
+	}
 }

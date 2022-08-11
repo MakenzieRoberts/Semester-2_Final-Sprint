@@ -4,7 +4,7 @@ import "./app.css";
 import SignUpPage from "./components/SignUpPage";
 import ProfilePage from "./components/ProfilePage";
 import FeedPage from "./components/FeedPage";
-import Logo from "./components/Logo";
+// import Logo from "./components/Logo";
 import LoginPage from "./components/LoginPage";
 import LoginFeedPage from "./components/LoginFeedPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -23,7 +23,7 @@ function App() {
 	return (
 		<div className="App">
 			<div class="container">
-				<Logo />
+				{/* <Logo /> */}
 				<Router>
 					<Routes>
 						<Route path="/" element={<SignUpPage />} />

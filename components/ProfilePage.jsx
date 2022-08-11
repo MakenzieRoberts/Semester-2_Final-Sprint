@@ -1,4 +1,5 @@
 import "../stylesheets/profilepage.css";
+import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -18,6 +19,7 @@ function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
 	};
 	return (
 		<div className="profilepage">
+			<Logo />
 			<form class="form">
 				<div id="form-title">
 					<h2>Create Profile</h2>

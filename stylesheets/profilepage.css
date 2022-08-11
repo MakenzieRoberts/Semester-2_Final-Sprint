@@ -151,10 +151,6 @@
 	text-align: center;
 	transition: 0.4s;
 	width: 100%;
-	-moz-transition: 0.4s;
-	-ms-transition: 0.4s;
-	-o-transition: 0.4s;
-	-webkit-transition: 0.4s;
 	-webkit-transition: 0.5s;
 }
 .profilepage button:hover {
@@ -167,4 +163,11 @@ button {
 	text-decoration: none;
 	font-weight: 100;
 	letter-spacing: 1px;
+}
+
+@media screen and (max-height: 300px) {
+	.profilepage .logo-area img {
+		/* width: 100px; */
+		visibility: hidden;
+	}
 }

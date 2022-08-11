@@ -19,6 +19,7 @@ html {
 
 .container {
 	/* width: 100vw; */
+
 	background: -webkit-linear-gradient(top left, #63d9a0 0, #9e0de7 95%);
 	box-sizing: border-box;
 	height: 100%;

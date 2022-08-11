@@ -5,12 +5,12 @@ function UserInfo(props) {
 	return (
 		<div className="userinfo">
 			<div id="namepronouns">
-				<h1>{props.value1}</h1>
+				<p id="username-text">{props.value1}</p>
 
-				<h1>({props.value2})</h1>
+				<p id="pronouns-text">({props.value2})</p>
 			</div>
 			<div id="bio">
-				<h1> {props.value3}</h1>
+				<p id="bio-text"> {props.value3}</p>
 			</div>
 		</div>
 	);

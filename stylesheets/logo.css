@@ -1,16 +1,15 @@
 @import "./reset.css";
 
-header {
-	height: 0;
-}
-
-svg {
+.logo-area img {
+	position: absolute;
+	top: 0;
 	margin: 1.5% 0 0 1.5%;
+	width: 18%;
 }
 
-@media screen and (max-height: 550px) {
-	header {
-		height: 0;
-		visibility: hidden;
+@media screen and (max-height: 600px) {
+	.logo-area img {
+		width: 20%;
+		/* visibility: hidden; */
 	}
 }
