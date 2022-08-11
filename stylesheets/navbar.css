@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap");
+
 .navbar {
-  background-color: orange;
+  font-size: 0.8rem;
+  font-weight: 100;
+  text-align: center;
 }
