@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700&display=swap");
+
 .userinfo {
-	background-color: lightgreen;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  font-size: 5pt;
+}
+
+h1 {
+  margin: 10px;
+}
+
+#namepronouns {
+  display: flex;
+
+  font-weight: 100;
 }
