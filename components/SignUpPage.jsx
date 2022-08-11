@@ -117,7 +117,10 @@ const SignUpPage = () => {
         </div>
         <div id="login-message">
           <p>
-            Already have an account? <span id="login-link">Login</span>
+            Already have an account?
+            <Link class="login" to="/login">
+              Login
+            </Link>
           </p>
         </div>
       </form>
