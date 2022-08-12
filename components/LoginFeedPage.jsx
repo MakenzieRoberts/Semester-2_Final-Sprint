@@ -1,4 +1,4 @@
-import "../stylesheets/loginfeedpage.css";
+import "../stylesheets/LoginFeedPage.css";
 import React from "react";
 import NavBar from "./NavBar";
 import UserInfo from "./UserInfo";
@@ -11,11 +11,18 @@ function LoginFeedPage({ username, pronouns, bio }) {
   const [post, setPost] = useState("");
 
   function sendData(e) {
-    setPosts([post, ...posts]);
-
+    empty(post);
     clearFields();
     e.preventDefault();
   }
+
+  const empty = (post) => {
+    if (!post) {
+      alert("blank");
+      return;
+    }
+    setPosts([post, ...posts]);
+  };
 
   function showPosts() {
     return (
