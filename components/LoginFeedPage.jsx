@@ -1,4 +1,4 @@
-import "../stylesheets/LoginFeedPage.css";
+import "../stylesheets/loginfeedpage.css";
 import React from "react";
 import NavBar from "./NavBar";
 import UserInfo from "./UserInfo";
