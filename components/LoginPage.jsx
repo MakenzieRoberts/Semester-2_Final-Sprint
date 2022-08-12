@@ -58,7 +58,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="signuppage">
+    <div className="loginpage">
       <form class="form" onSubmit={handleSubmit}>
         <div id="form-title">
           <h2>Login</h2>
