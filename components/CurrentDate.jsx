@@ -1,21 +1,16 @@
 import React from "react";
 
 export default function CurrDate() {
-	const current = new Date();
-	const date = `${
-		current.getMonth() + 1
-	} ${current.getFullYear()}, ${current.getHours()}:${current.getMinutes()}`;
+  const current = new Date();
+  const date = `${current.getDate()} ${current.getFullYear()}, ${current.getHours()}:${current.getMinutes()}`;
 
-	const weekday = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  const month = current.toLocaleString("default", { month: "short" });
 
-	const d = new Date();
-	let day = weekday[d.getDay()];
-
-	return (
-		<div className="date">
-			<h1>
-				{day} {date}
-			</h1>
-		</div>
-	);
+  return (
+    <div className="date">
+      <h1>
+        {month} {date}
+      </h1>
+    </div>
+  );
 }
