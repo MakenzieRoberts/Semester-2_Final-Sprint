@@ -48,7 +48,7 @@ const SignUpPage = () => {
 		if (Object.keys(formErrors).length === 0 && isSubmit) {
 			navigateToProfile();
 			console.log(formValues);
-		}
+		} // eslint-disable-next-line
 	}, [formErrors]);
 	//   THIRD FUNCTION CREATED: the validate function, validate = (values), values is take all the form values which have be submitted
 	const validate = (values) => {

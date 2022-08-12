@@ -20,12 +20,20 @@ function FeedPage({ username, pronouns, bio }) {
 	};
 
 	function sendData(e) {
-		setPosts([post, ...posts]);
+		empty(post);
 
 		clearFields();
 		changeStyle();
 		e.preventDefault();
 	}
+
+	const empty = (post) => {
+		if (!post) {
+			alert("blank");
+			return;
+		}
+		setPosts([post, ...posts]);
+	};
 
 	function showPosts() {
 		return (

@@ -1,103 +1,103 @@
-import "../stylesheets/LoginPage.css";
+import "../stylesheets/loginpage.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-  const initialValues = { email: "", password: "" };
+	const initialValues = { email: "", password: "" };
 
-  const [formValues, setFormValues] = useState(initialValues);
+	const [formValues, setFormValues] = useState(initialValues);
 
-  const [formErrors, setFormErrors] = useState({});
+	const [formErrors, setFormErrors] = useState({});
 
-  const [isSubmit, setIsSubmit] = useState(false);
+	const [isSubmit, setIsSubmit] = useState(false);
 
-  const navigateToProfile = () => {
-    navigate("/login/userfeed");
-  };
-  const navigate = useNavigate();
+	const navigateToProfile = () => {
+		navigate("/login/userfeed");
+	};
+	const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+	const handleChange = (e) => {
+		const { name, value } = e.target;
 
-    setFormValues({ ...formValues, [name]: value });
+		setFormValues({ ...formValues, [name]: value });
 
-    console.log(formValues);
-  };
+		console.log(formValues);
+	};
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+	const handleSubmit = (e) => {
+		e.preventDefault();
 
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-  };
+		setFormErrors(validate(formValues));
+		setIsSubmit(true);
+	};
 
-  useEffect(() => {
-    console.log(Object.keys(formErrors).length);
+	useEffect(() => {
+		console.log(Object.keys(formErrors).length);
 
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      navigateToProfile();
-      console.log(formValues);
-    }
-  }, [formErrors]);
+		if (Object.keys(formErrors).length === 0 && isSubmit) {
+			navigateToProfile();
+			console.log(formValues);
+		} // eslint-disable-next-line
+	}, [formErrors]);
 
-  const validate = (values) => {
-    const errors = {};
-    console.log(errors);
+	const validate = (values) => {
+		const errors = {};
+		console.log(errors);
 
-    if (!values.email) {
-      errors.email = "Username is required!";
-    }
+		if (!values.email) {
+			errors.email = "Username is required!";
+		}
 
-    if (!values.password) {
-      errors.password = "Password is required";
-    }
+		if (!values.password) {
+			errors.password = "Password is required";
+		}
 
-    return errors;
-  };
+		return errors;
+	};
 
-  return (
-    <div className="loginpage">
-      <form class="form" onSubmit={handleSubmit}>
-        <div id="form-title">
-          <h2>Login</h2>
-        </div>
-        <div class="inputs">
-          <div class="gradient-border">
-            <input
-              name="email"
-              type="text"
-              placeholder="E-mail"
-              value={formValues.email}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.email}</p>
-          <div class="gradient-border">
-            <input
-              name="password"
-              type="text"
-              placeholder="Password"
-              value={formValues.password}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.password}</p>
+	return (
+		<div className="loginpage">
+			<form class="form" onSubmit={handleSubmit}>
+				<div id="form-title">
+					<h2>Login</h2>
+				</div>
+				<div class="inputs">
+					<div class="gradient-border">
+						<input
+							name="email"
+							type="text"
+							placeholder="E-mail"
+							value={formValues.email}
+							onChange={handleChange}
+						/>
+					</div>
+					<p>{formErrors.email}</p>
+					<div class="gradient-border">
+						<input
+							name="password"
+							type="text"
+							placeholder="Password"
+							value={formValues.password}
+							onChange={handleChange}
+						/>
+					</div>
+					<p>{formErrors.password}</p>
 
-          <button class="button-text">Login</button>
-        </div>
-        <div id="login-message">
-          <p>
-            Don't Have an Account?{" "}
-            <Link class="login" to="/">
-              Sign Up
-            </Link>
-          </p>
-        </div>
-      </form>
-    </div>
-  );
+					<button class="button-text">Login</button>
+				</div>
+				<div id="login-message">
+					<p>
+						Don't Have an Account?{" "}
+						<Link class="login" to="/">
+							Sign Up
+						</Link>
+					</p>
+				</div>
+			</form>
+		</div>
+	);
 };
 
 export default LoginPage;
