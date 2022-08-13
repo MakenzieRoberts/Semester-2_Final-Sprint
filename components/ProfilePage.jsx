@@ -22,7 +22,7 @@ function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
 			<Logo />
 			<form className="form">
 				<div id="form-title">
-					<h2>Create Profile</h2>
+					<h1>Create Profile</h1>
 				</div>
 				<div className="inputs">
 					<div className="gradient-border">

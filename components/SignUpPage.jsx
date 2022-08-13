@@ -81,7 +81,7 @@ const SignUpPage = () => {
 			{/* so here I wanted to see all the values so I used an onSubmit listener and called it handleSubmit */}
 			<form className="form" onSubmit={handleSubmit}>
 				<div id="form-title">
-					<h2>Sign Up</h2>
+					<h1>Sign Up</h1>
 				</div>
 				<div className="inputs">
 					<div className="gradient-border">
