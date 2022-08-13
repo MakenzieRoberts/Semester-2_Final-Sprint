@@ -1,4 +1,5 @@
 import "../stylesheets/loginpage.css";
+import Logo from "./Logo";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -59,12 +60,13 @@ const LoginPage = () => {
 
 	return (
 		<div className="loginpage">
-			<form class="form" onSubmit={handleSubmit}>
+			<Logo />
+			<form className="form" onSubmit={handleSubmit}>
 				<div id="form-title">
 					<h2>Login</h2>
 				</div>
-				<div class="inputs">
-					<div class="gradient-border">
+				<div className="inputs">
+					<div className="gradient-border">
 						<input
 							name="email"
 							type="text"
@@ -74,10 +76,10 @@ const LoginPage = () => {
 						/>
 					</div>
 					<p>{formErrors.email}</p>
-					<div class="gradient-border">
+					<div className="gradient-border">
 						<input
 							name="password"
-							type="text"
+							type="password"
 							placeholder="Password"
 							value={formValues.password}
 							onChange={handleChange}
@@ -85,13 +87,13 @@ const LoginPage = () => {
 					</div>
 					<p>{formErrors.password}</p>
 
-					<button class="button-text">Login</button>
+					<button className="button-text">Login</button>
 				</div>
-				<div id="login-message">
+				<div id="signup-message">
 					<p>
 						Don't Have an Account?{" "}
-						<Link class="login" to="/">
-							Sign Up
+						<Link className="signup" to="/">
+							Sign Up!
 						</Link>
 					</p>
 				</div>

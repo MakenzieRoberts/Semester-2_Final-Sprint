@@ -79,12 +79,12 @@ const SignUpPage = () => {
 		<div className="signuppage">
 			<Logo />
 			{/* so here I wanted to see all the values so I used an onSubmit listener and called it handleSubmit */}
-			<form class="form" onSubmit={handleSubmit}>
+			<form className="form" onSubmit={handleSubmit}>
 				<div id="form-title">
 					<h2>Sign Up</h2>
 				</div>
-				<div class="inputs">
-					<div class="gradient-border">
+				<div className="inputs">
+					<div className="gradient-border">
 						<input
 							name="email"
 							type="email"
@@ -95,7 +95,7 @@ const SignUpPage = () => {
 						/>
 					</div>
 					<p>{formErrors.email}</p>
-					<div class="gradient-border">
+					<div className="gradient-border">
 						<input
 							name="password"
 							//   changed this from "text" to "password"
@@ -110,17 +110,17 @@ const SignUpPage = () => {
 					<p>{formErrors.password}</p>
 
 					{/* I stripped out the link to show the errors */}
-					<button class="button-text">Sign Up</button>
+					<button className="button-text">Sign Up</button>
 
 					{/* original below */}
-					{/* <Link class="button-text" to="/signup/createprofile">
+					{/* <Link className="button-text" to="/signup/createprofile">
             <button>Sign Up</button>
           </Link> */}
 				</div>
 				<div id="login-message">
 					<p>
 						Already have an account?{" "}
-						<Link class="login" to="/login">
+						<Link className="login" to="/login">
 							Login
 						</Link>
 					</p>

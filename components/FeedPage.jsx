@@ -8,22 +8,22 @@ import { useState } from "react";
 import CurrDate from "./CurrentDate";
 
 function FeedPage({ username, pronouns, bio }) {
-	const [feedMsgStyle, setStyle] = useState("visiblefeedmsg");
+	const [feedMsgStyle, setMsgStyle] = useState("visiblefeedmsg");
 
 	const [posts, setPosts] = useState([]);
 	const [post, setPost] = useState("");
 
-	const changeStyle = () => {
+	const changeMsgStyle = () => {
 		console.log("you just clicked");
 
-		setStyle("hiddenfeedmsg");
+		setMsgStyle("hiddenfeedmsg");
 	};
 
 	function sendData(e) {
 		empty(post);
 
 		clearFields();
-		changeStyle();
+
 		e.preventDefault();
 	}
 
@@ -32,6 +32,7 @@ function FeedPage({ username, pronouns, bio }) {
 			alert("blank");
 			return;
 		}
+		changeMsgStyle();
 		setPosts([post, ...posts]);
 	};
 
@@ -42,25 +43,26 @@ function FeedPage({ username, pronouns, bio }) {
 					return (
 						<>
 							<div className="newpost">
-								<div className="newpostuser">
-									<div className="newpostpic">
+								<div className="newpost-user">
+									<div className="newpost-pic">
 										<UserPicture />
 									</div>
-									<div className="newpostuserinfo">
-										<div className="userinfo">
-											<div id="namepronouns">
-												<p class="username-text">{username}</p>
 
-												<p class="pronouns-text">({pronouns})</p>
-											</div>
+									<div className="newpost-userinfo">
+										<div className="newpost-namepronouns">
+											<p className="newpost-username-text">{username}</p>
+
+											<p className="newpost-pronouns-text">({pronouns})</p>
 										</div>
 									</div>
 								</div>
-								<div className="newpostcontent">
+
+								<div className="newpost-content">
 									<p>{post}</p>
-								</div>
-								<div className="newpostdate">
-									<CurrDate />
+
+									<div className="newpost-date">
+										<CurrDate />
+									</div>
 								</div>
 							</div>
 						</>
@@ -86,8 +88,8 @@ function FeedPage({ username, pronouns, bio }) {
 					</div>
 				</div>
 				<div id="newpost-container">
-					<div class="gradient-border">
-						<div class="form-container">
+					<div className="gradient-border">
+						<div className="form-container">
 							<form onSubmit={sendData}>
 								<textarea
 									type="text"
@@ -99,7 +101,7 @@ function FeedPage({ username, pronouns, bio }) {
 									}}
 								/>
 
-								<button class="button-text" type="submit">
+								<button className="button-text" type="submit">
 									Post
 								</button>
 							</form>

@@ -82,7 +82,7 @@ function LoginFeedPage({ username, pronouns, bio }) {
 							setPost(e.target.value);
 						}}
 					/>
-					<button class="button-text" type="submit">
+					<button className="button-text" type="submit">
 						Post
 					</button>
 				</form>

@@ -20,23 +20,23 @@ function ProfilePage({ handleUserInfo, username, pronouns, bio }) {
 	return (
 		<div className="profilepage">
 			<Logo />
-			<form class="form">
+			<form className="form">
 				<div id="form-title">
 					<h2>Create Profile</h2>
 				</div>
-				<div class="inputs">
-					<div class="gradient-border">
+				<div className="inputs">
+					<div className="gradient-border">
 						<input type="text" id="username" placeholder="Username" />
 					</div>
-					<div class="gradient-border">
+					<div className="gradient-border">
 						<input type="text" id="pronouns" placeholder="Preferred Pronouns" />
 					</div>
-					<div class="gradient-border">
+					<div className="gradient-border">
 						<textarea type="text" id="bio" placeholder="Bio" />
 					</div>
 
 					<button onClick={sendData}>
-						<Link class="button-text" to="/feed">
+						<Link className="button-text" to="/feed">
 							Proceed
 						</Link>
 					</button>
