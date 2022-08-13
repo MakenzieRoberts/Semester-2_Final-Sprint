@@ -62,20 +62,12 @@
 .signuppage input {
 	margin: 2px 0; /*Controls border gradient width*/
 	width: 98%;
-}
-
-.signuppage input[type="email"],
-.signuppage input[type="password"] {
-	padding: 10px;
+	padding: 0 10px;
 }
 
 .signuppage input,
 .signuppage button {
 	height: 32px;
-}
-
-.signuppage input,
-.signuppage button {
 	border-radius: 5px;
 	border: none;
 	-webkit-border-radius: 5px;
@@ -85,10 +77,6 @@
 	outline: 3px solid black;
 }
 
-.signuppage input[type="text"],
-.signuppage textarea[type="text"] {
-	padding: 10px;
-}
 .signuppage .gradient-border {
 	align-items: center;
 	background: -webkit-linear-gradient(top left, #63d9a0 0, #9e0de7 95%);
@@ -119,20 +107,24 @@
 	background-size: 200% auto;
 	border-radius: 5px;
 	border: none;
-	box-shadow: 0 0 20px #eee;
+	box-shadow: 0px 3px 4px rgb(165, 165, 165);
 
 	display: block;
 	line-height: 5px;
 	margin: 5% 0;
 	text-align: center;
-	transition: 0.4s;
+	transition: 0.5s;
 	width: 100%;
 	-webkit-transition: 0.5s;
 }
 .signuppage button:hover {
 	background-position: right center;
 }
-
+.signuppage button:active {
+	transition: 0.1s;
+	box-shadow: 0px 1px 2px rgb(160, 160, 160);
+	transform: translateY(2px);
+}
 .signuppage .button-text,
 button {
 	color: white;

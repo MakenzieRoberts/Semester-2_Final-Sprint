@@ -1,162 +1,160 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
 .loginpage {
-  display: flex;
-  scrollbar-width: thin;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 100%;
+	display: flex;
+	scrollbar-width: thin;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	min-height: 100%;
 }
 
 .loginpage ::-webkit-scrollbar {
-  -moz-border-radius: 0 10px 10px 0;
-  -ms-border-radius: 0 10px 10px 0;
-  -o-border-radius: 0 10px 10px 0;
-  -webkit-border-radius: 0 10px 10px 0;
-  border-radius: 0 10px 10px 0;
-  border: 5px solid white;
-  height: 10px;
-  width: 8px;
+	-moz-border-radius: 0 10px 10px 0;
+	-ms-border-radius: 0 10px 10px 0;
+	-o-border-radius: 0 10px 10px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+	border: 5px solid white;
+	height: 10px;
+	width: 8px;
 }
 .loginpage ::-webkit-scrollbar-thumb {
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  background: #c2c9d2;
-  border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background: #c2c9d2;
+	border-radius: 10px;
 }
 
 .loginpage .form {
-  align-items: center;
-  background-color: white;
-  border-bottom: 4px solid transparent;
-  border-radius: 12px;
-  border-right: 4px solid transparent;
-  border-top: 4px solid transparent;
-  display: flex;
-  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
-  flex-direction: column;
-  justify-content: space-between;
-  margin: auto;
-  max-height: 70vh;
-  min-width: fit-content;
-  overflow-y: auto;
-  padding: 72px 0;
-  width: 18vw;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+	align-items: center;
+	background-color: white;
+	border-bottom: 4px solid transparent;
+	border-radius: 12px;
+	border-right: 4px solid transparent;
+	border-top: 4px solid transparent;
+	display: flex;
+	filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+	flex-direction: column;
+	justify-content: space-between;
+	margin: auto;
+	max-height: 70vh;
+	min-width: fit-content;
+	overflow-y: auto;
+	padding: 72px 0;
+	width: 18vw;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
 }
 
 .loginpage #form-title {
-  height: 50px;
+	height: 50px;
 }
 .loginpage .form h2 {
-  font-size: 32pt;
-  white-space: nowrap;
+	font-size: 32pt;
+	white-space: nowrap;
 }
 
 .loginpage .inputs {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 5% 0;
-  width: 82%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 5% 0;
+	width: 82%;
 }
 .loginpage input {
-  margin: 2px 0; /*Controls border gradient width*/
-  width: 98%;
-}
-
-.loginpage input[type="text"] {
-  padding: 10px;
+	margin: 2px 0; /*Controls border gradient width*/
+	width: 98%;
+	padding: 0 10px;
 }
 
 .loginpage input,
 .loginpage button {
-  height: 32px;
+	height: 32px;
 }
 
 .loginpage input,
 .signuppage button {
-  border-radius: 5px;
-  border: none;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  -webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: none;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }
 
 .loginpage input:focus-visible {
-  outline: 3px solid black;
+	outline: 3px solid black;
 }
 
 .loginpage input[type="text"],
 .loginpage textarea[type="text"] {
-  padding: 10px;
+	padding: 10px;
 }
 .loginpage .gradient-border {
-  align-items: center;
-  background: -webkit-linear-gradient(top left, #63d9a0 0, #9e0de7 95%);
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0;
+	align-items: center;
+	background: -webkit-linear-gradient(top left, #63d9a0 0, #9e0de7 95%);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
 
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  -webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	-webkit-border-radius: 6px;
 }
 .loginpage button {
-  background-image: linear-gradient(
-    to right,
-    #63d9a0 0%,
-    #9e0de7 50%,
-    #63d9a0 100%
-  );
+	background-image: linear-gradient(
+		to right,
+		#63d9a0 0%,
+		#9e0de7 50%,
+		#63d9a0 100%
+	);
 
-  background-size: 200% auto;
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0 0 20px #eee;
+	background-size: 200% auto;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 3px 4px rgb(165, 165, 165);
 
-  display: block;
-  line-height: 5px;
-  margin: 5% 0;
-  text-align: center;
-  transition: 0.4s;
-  width: 100%;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
-  -webkit-transition: 0.4s;
-  -webkit-transition: 0.5s;
+	display: block;
+	line-height: 5px;
+	margin: 5% 0;
+	text-align: center;
+	transition: 0.5s;
+	width: 100%;
+	-webkit-transition: 0.5s;
 }
 .loginpage button:hover {
-  background-position: right center;
+	background-position: right center;
+}
+.loginpage button:active {
+	transition: 0.1s;
+	box-shadow: 0px 1px 2px rgb(160, 160, 160);
+	transform: translateY(2px);
 }
 
 .loginpage .button-text,
 button {
-  color: white;
-  text-decoration: none;
-  font-weight: 200;
-  letter-spacing: 1px;
+	color: white;
+	text-decoration: none;
+	font-weight: 200;
+	letter-spacing: 1px;
 }
 
-.loginpage #login-message p {
-  padding: 8px 30px;
+.loginpage #signup-message p {
+	padding: 8px 30px;
 
-  text-align: center;
+	text-align: center;
 }
 
-.loginpage #login-link {
-  color: #9e0de7;
-  font-weight: 700;
-  text-decoration: underline;
+.loginpage .signup {
+	color: #9e0de7;
+	font-weight: 700;
+	text-decoration: underline;
 }
