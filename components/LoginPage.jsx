@@ -48,7 +48,7 @@ const LoginPage = () => {
 		console.log(errors);
 
 		if (!values.email) {
-			errors.email = "Username is required!";
+			errors.email = "Email is required!";
 		}
 
 		if (!values.password) {

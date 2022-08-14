@@ -1,5 +1,4 @@
-.userpicture img {
-	width: 10;
-	height: 10;
-	border-radius: 100px;
+.userpicture {
+	width: 80px;
+	height: 80px;
 }

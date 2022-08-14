@@ -1,5 +1,4 @@
-.userfeedpicture img {
-	width: 10;
-	height: 10;
-	border-radius: 100px;
+.userfeedpicture {
+	width: 80px;
+	height: 80px;
 }

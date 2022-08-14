@@ -44,8 +44,8 @@
 	max-height: 70vh;
 	min-width: fit-content;
 	overflow-y: auto;
-	padding: 58px 30px;
-
+	padding: 58px 0;
+	width: 18vw;
 	-webkit-border-radius: 12px;
 	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
 }
@@ -56,6 +56,7 @@
 .profilepage .form h1 {
 	font-size: 28pt;
 	white-space: nowrap;
+	padding: 0 40px;
 }
 
 .profilepage .inputs {
@@ -63,7 +64,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 
-	width: 98%;
+	width: 82%;
 }
 .profilepage input,
 .profilepage textarea {
@@ -109,10 +110,6 @@
 	outline: 3px solid black;
 }
 
-.profilepage input::placeholder {
-	/* padding-left: 10px; */
-}
-
 .profilepage #bio {
 	display: inline-block;
 	height: 72px;
@@ -132,6 +129,17 @@
 	-o-border-radius: 6px;
 	-webkit-border-radius: 6px;
 }
+
+.profilepage .inputs p {
+	color: red;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif;
+
+	white-space: wrap;
+	max-width: 280px;
+}
+
 .profilepage button {
 	background-image: linear-gradient(
 		to right,
@@ -161,17 +169,8 @@
 	transform: translateY(2px);
 }
 
-.profilepage .button-text,
-button {
-	color: white;
-	text-decoration: none;
-	font-weight: 100;
-	letter-spacing: 1px;
-}
-
 @media screen and (max-height: 300px) {
 	.profilepage .logo-area img {
-		/* width: 100px; */
 		visibility: hidden;
 	}
 }

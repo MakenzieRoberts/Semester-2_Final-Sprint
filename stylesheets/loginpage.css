@@ -109,6 +109,16 @@
 	-o-border-radius: 6px;
 	-webkit-border-radius: 6px;
 }
+.loginpage .inputs p {
+	color: red;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: Arial, Helvetica, sans-serif;
+
+	white-space: wrap;
+	max-width: 280px;
+}
+
 .loginpage button {
 	background-image: linear-gradient(
 		to right,
@@ -137,14 +147,6 @@
 	transition: 0.1s;
 	box-shadow: 0px 1px 2px rgb(160, 160, 160);
 	transform: translateY(2px);
-}
-
-.loginpage .button-text,
-button {
-	color: white;
-	text-decoration: none;
-	font-weight: 200;
-	letter-spacing: 1px;
 }
 
 .loginpage #signup-message p {
