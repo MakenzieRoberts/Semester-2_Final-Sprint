@@ -26,7 +26,7 @@ This is our group project for the Final Sprint (2nd Semester) at Keyin College's
 <a href="https://github.com/MakenzieRoberts">
   <img height="50px" src="https://avatars.githubusercontent.com/u/100213075?v=4">
 </a>
-<a href="https://github.com/https://github.com/kbalsom">
+<a href="https://github.com/kbalsom">
   <img height="50px" src="https://avatars.githubusercontent.com/u/100210446?v=4">
 </a>
 <a href="https://github.com/DeToxFox">
