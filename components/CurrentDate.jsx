@@ -10,9 +10,9 @@ export default function CurrDate() {
 
 	return (
 		<div className="date">
-			<h1>
+			<p>
 				{month} {date}
-			</h1>
+			</p>
 		</div>
 	);
 }

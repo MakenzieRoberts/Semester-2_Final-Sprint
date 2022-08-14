@@ -5,9 +5,9 @@ function NavBar() {
 	return (
 		<div className="navbar">
 			<div id="nav-links">
-				<h1>Home</h1>
-				<br />
-				<h1>Explore</h1>
+				<a href="#">Home</a>
+
+				<a href="#">Explore</a>
 			</div>
 		</div>
 	);
