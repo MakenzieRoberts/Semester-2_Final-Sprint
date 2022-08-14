@@ -4,11 +4,11 @@ import logo from "../images/logo.png";
 function Logo() {
 	return (
 		<>
-			{/* <header> */}
 			<div className="logo-area">
-				<img src={logo} alt="SafeSpace Logo" />
+				<a href="/">
+					<img src={logo} alt="SafeSpace Logo" />
+				</a>
 			</div>
-			{/* </header> */}
 		</>
 	);
 }
