@@ -26,19 +26,6 @@
 	background-color: white;
 	height: 100%;
 }
-.feedpage .navbar {
-	color: white;
-	height: 700px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 50%;
-}
-
-.feedpage .navbar h1 {
-	font-weight: 300;
-	font-size: 15pt;
-}
 
 .feedpage #user {
 	border: 1px solid rgb(156, 156, 156);
@@ -55,11 +42,6 @@
 	margin: 0px 30px;
 	display: flex;
 	align-items: center;
-}
-
-.feedpage #userpicture img {
-	width: 80px;
-	height: 80px;
 }
 
 .feedpage #userinfo {
@@ -99,11 +81,8 @@
 .feedpage form {
 	display: flex;
 	flex-direction: column;
-	/*border: 1px solid grey;
-  */
 	border: 5px solid white;
 	border-radius: 6px;
-	/* margin: 10px; */
 	width: 100%;
 	height: 100%;
 	-webkit-border-radius: 6px;
@@ -160,14 +139,6 @@
 	transform: translateY(2px);
 }
 
-.feedpage .button-text,
-button {
-	color: white;
-	text-decoration: none;
-	font-weight: 500;
-	letter-spacing: 1px;
-}
-
 .feedpage #posts-container {
 	border-right: 1px solid rgb(156, 156, 156);
 	border-bottom: 1px solid rgb(156, 156, 156);
@@ -180,6 +151,7 @@ button {
 }
 
 .feedpage .visiblefeedmsg {
+	color: rgb(110, 110, 110);
 	text-align: center;
 	margin: 40px;
 }
@@ -189,53 +161,23 @@ button {
 }
 
 .feedpage .newpost {
-	border: 1px solid rgb(156, 156, 156);
+	position: relative;
+	border: 1px solid rgb(177, 177, 177);
 	border-radius: 6px;
 	margin: 10px;
 	padding: 20px;
 	-o-border-radius: 6px;
 }
-/* .feedpage .username-text {
-	font-size: 24px;
-	font-weight: bold;
-	color: rgb(94, 94, 94);
-	padding: 4px 0;
-}
-.feedpage .pronouns-text {
-	font-size: 14px;
-	font-weight: 500;
-	color: rgb(180, 7, 7);
-	margin: 0 10px;
-	padding: 4px 0;
-}
-.feedpage .bio {
-	padding: 10px 0 0 0;
-	max-width: 800px;
-}
-.feedpage .bio-text {
-	padding: 5px 0;
-	font-size: 16px;
-	color: rgb(151, 151, 151);
-	overflow-wrap: break-word;
-} */
-
-/* .feedpage #namepronouns {
-	display: flex;
-
-	font-weight: 100;
-}
-*/
 
 .feedpage .newpost-user {
 	display: flex;
 	align-items: center;
-	/* height: 100px; */
 }
 
 .feedpage .newpost-pic img {
-	width: 40px;
-	height: 40px;
-	/* margin: 20px; */
+	width: 50px;
+	height: 50px;
+	margin: 0 6px;
 }
 
 .feedpage .newpost-userinfo {
@@ -278,19 +220,12 @@ button {
 
 .feedpage .newpost-content p {
 	overflow-wrap: break-word;
-	margin: 20px 0;
+	margin-top: 10px;
+	margin-left: 84px;
 }
 
-.feedpage .newpost-date {
-	font-size: 0.5rem;
-}
-
-@media screen and (max-height: 550px) {
-	svg {
-		width: 100%;
-		height: 100%;
-	}
-	.logo-area {
-		background-color: red;
-	}
+.feedpage .newpost-date p {
+	font-size: 1rem;
+	color: rgb(110, 110, 110);
+	margin-top: 20px;
 }

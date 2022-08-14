@@ -4,7 +4,8 @@ import React from "react";
 import NavBar from "./NavBar";
 import UserInfo from "./UserInfo";
 import UserPicture from "./UserPicture";
-import { useState } from "react";
+import Heart from "./Heart";
+import { useState, useEffect } from "react";
 import CurrDate from "./CurrentDate";
 
 function FeedPage({ username, pronouns, bio }) {
@@ -12,6 +13,13 @@ function FeedPage({ username, pronouns, bio }) {
 
 	const [posts, setPosts] = useState([]);
 	const [post, setPost] = useState("");
+	const [pronounsFormat, setPronounsFormat] = useState(pronouns);
+
+	useEffect(() => {
+		if (pronounsFormat.length !== 0) {
+			setPronounsFormat(`(${pronouns})`);
+		}
+	}, []);
 
 	const changeMsgStyle = () => {
 		console.log("you just clicked");
@@ -29,7 +37,7 @@ function FeedPage({ username, pronouns, bio }) {
 
 	const empty = (post) => {
 		if (!post) {
-			alert("blank");
+			alert("Post cannot be blank.");
 			return;
 		}
 		changeMsgStyle();
@@ -52,7 +60,7 @@ function FeedPage({ username, pronouns, bio }) {
 										<div className="newpost-namepronouns">
 											<p className="newpost-username-text">{username}</p>
 
-											<p className="newpost-pronouns-text">({pronouns})</p>
+											<p className="newpost-pronouns-text">{pronounsFormat}</p>
 										</div>
 									</div>
 								</div>
@@ -64,6 +72,7 @@ function FeedPage({ username, pronouns, bio }) {
 										<CurrDate />
 									</div>
 								</div>
+								<Heart />
 							</div>
 						</>
 					);

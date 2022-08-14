@@ -1,8 +1,10 @@
 import "../stylesheets/loginfeedpage.css";
+import Logo from "./Logo";
 import React from "react";
 import NavBar from "./NavBar";
 import UserInfo from "./UserInfo";
 import UserFeedPicture from "./UserFeedPicture";
+import Heart from "./Heart";
 import { useState } from "react";
 import CurrDate from "./CurrentDate";
 
@@ -18,7 +20,7 @@ function LoginFeedPage({ username, pronouns, bio }) {
 
 	const empty = (post) => {
 		if (!post) {
-			alert("blank");
+			alert("Post cannot be blank.");
 			return;
 		}
 		setPosts([post, ...posts]);
@@ -31,18 +33,26 @@ function LoginFeedPage({ username, pronouns, bio }) {
 					return (
 						<>
 							<div className="newpost">
-								<div id="newpostuser">
-									<div id="newpostpic">
+								<div className="newpost-user">
+									<div className="newpost-pic">
 										<UserFeedPicture />
 									</div>
-									<div id="newpostuserinfo">
-										<UserInfo value1={"Noman"} value2={"he/him"} />
+									<div className="newpost-userinfo">
+										<div className="newpost-namepronouns">
+											<p className="newpost-username-text">Noman</p>
+
+											<p className="newpost-pronouns-text">(he/him)</p>
+										</div>
 									</div>
 								</div>
-								<div id="newpostcontent">{post}</div>
-								<div id="newpostdate">
-									<CurrDate />
+								<div className="newpost-content">
+									<p>{post}</p>
+
+									<div className="newpost-date">
+										<CurrDate />
+									</div>
 								</div>
+								<Heart />
 							</div>
 						</>
 					);
@@ -54,11 +64,12 @@ function LoginFeedPage({ username, pronouns, bio }) {
 	return (
 		<div className="loginfeedpage">
 			<div className="nav">
+				<Logo />
 				<NavBar />
 			</div>
 			<div className="feed">
 				<div id="user">
-					<div id="userfeedpicture">
+					<div id="userpicture">
 						<UserFeedPicture />
 					</div>
 					<div id="userinfo">
@@ -71,52 +82,78 @@ function LoginFeedPage({ username, pronouns, bio }) {
 						/>
 					</div>
 				</div>
+				<div id="newpost-container">
+					<div className="gradient-border">
+						<div className="form-container">
+							<form onSubmit={sendData}>
+								<textarea
+									type="text"
+									id="post"
+									placeholder="Create New Post..."
+									value={post}
+									onChange={(e) => {
+										setPost(e.target.value);
+									}}
+								/>
 
-				<form onSubmit={sendData}>
-					<textarea
-						type="text"
-						id="post"
-						placeholder="Create New Post..."
-						value={post}
-						onChange={(e) => {
-							setPost(e.target.value);
-						}}
-					/>
-					<button className="button-text" type="submit">
-						Post
-					</button>
-				</form>
-				<div className="target">{posts.length > 0 && showPosts()}</div>
-				<div className="newpost">
-					<div id="newpostuser">
-						<div id="newpostpic">
-							<UserFeedPicture />
+								<button className="button-text" type="submit">
+									Post
+								</button>
+							</form>
 						</div>
-						<div id="newpostuserinfo">
-							<UserInfo value1={"Noman"} value2={"he/him"} />
-						</div>
-					</div>
-					<div id="newpostcontent">
-						Wow! Kara, David, and Makenzie did so well on their Sprint! I will
-						give them a Pass Outstanding.
-					</div>
-					<div id="newpostdate">
-						<h1>Aug 19 2022, 13:23</h1>
 					</div>
 				</div>
+				<div className="target">{posts.length > 0 && showPosts()}</div>
 				<div className="newpost">
-					<div id="newpostuser">
-						<div id="newpostpic">
+					<div className="newpost-user">
+						<div className="newpost-pic">
 							<UserFeedPicture />
 						</div>
-						<div id="newpostuserinfo">
-							<UserInfo value1={"Noman"} value2={"he/him"} />
+						<div className="newpost-userinfo">
+							<div className="newpost-namepronouns">
+								<p className="newpost-username-text">Noman</p>
+
+								<p className="newpost-pronouns-text">(he/him)</p>
+							</div>
 						</div>
 					</div>
-					<div id="newpostcontent">Hello Everyone! Welcome to Sprint Week!</div>
-					<div id="newpostdate">
-						<h1>Aug 8 2022, 9:00</h1>
+					<div className="newpost-content">
+						<p>
+							Wow! Kara, David, and Makenzie did so well on their Sprint! I will
+							give them a Pass Outstanding.
+						</p>
+
+						<div className="newpost-date">
+							<div className="date">
+								<p>Aug 19 2022, 13:23</p>
+							</div>
+						</div>
 					</div>
+					<Heart />
+				</div>
+				<div className="newpost">
+					<div className="newpost-user">
+						<div className="newpost-pic">
+							<UserFeedPicture />
+						</div>
+						<div className="newpost-userinfo">
+							<div className="newpost-namepronouns">
+								<p className="newpost-username-text">Noman</p>
+
+								<p className="newpost-pronouns-text">(he/him)</p>
+							</div>
+						</div>
+					</div>
+					<div className="newpost-content">
+						<p>Hello Everyone! Welcome to Sprint Week!</p>
+
+						<div className="newpost-date">
+							<div className="date">
+								<p>Aug 8 2022, 9:00</p>
+							</div>
+						</div>
+					</div>
+					<Heart />
 				</div>
 			</div>
 		</div>

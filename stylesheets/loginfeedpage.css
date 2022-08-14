@@ -1,70 +1,113 @@
+@import "./reset.css";
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700&display=swap");
 
 .loginfeedpage {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
+	height: 100%;
 }
-
-.loginfeedpage .navbar {
-	color: white;
-	height: 700px;
+.loginfeedpage ::-webkit-scrollbar {
+	border-radius: 0 10px 10px 0;
+	border: 5px solid white;
+	height: 10px;
+	width: 8px;
+}
+.loginfeedpage ::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 10px;
+	background: #c2c9d2;
+	border-radius: 10px;
+}
+.loginfeedpage .feed {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.loginfeedpage .navbar h1 {
-	font-weight: 300;
-	font-size: 15pt;
+	justify-self: flex-end;
+	width: 100%;
+	max-width: 75vw;
+	background-color: white;
+	height: 100%;
 }
 
 .loginfeedpage #user {
-	border: 1px solid grey;
+	border: 1px solid rgb(156, 156, 156);
 	border-radius: 6px;
 	display: grid;
-	grid-template-columns: 1fr 5fr;
-	height: 150px;
+	grid-template-columns: 1fr 10fr;
+	min-height: 120px;
+	max-height: 120px;
 	margin: 10px;
-}
-
-.loginfeedpage .feed {
-	background-color: white;
-	margin: 30px;
+	overflow-y: auto;
 }
 
 .loginfeedpage #userpicture {
+	margin: 0px 30px;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	width: "10px";
-	height: "10px";
 }
 
 .loginfeedpage #userinfo {
 	display: flex;
 	align-items: center;
 }
+.loginfeedpage #newpost-container {
+	border: 1px solid rgb(156, 156, 156);
+	border-radius: 6px 6px 0 0;
+	margin: 0 10px;
+	overflow-y: auto;
+}
 
-.loginfeedpage form {
-	border: 1px solid grey;
+.loginfeedpage .gradient-border {
+	align-items: center;
+	background: -webkit-linear-gradient(top left, #63d9a0 0, #9e0de7 95%);
 	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	height: 100px;
+	-webkit-border-radius: 6px;
 	margin: 10px;
-	height: 150px;
+}
+.loginfeedpage .form-container {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 99.6%;
+	height: 96px;
+	border-radius: 6px;
+}
+.loginfeedpage form {
+	display: flex;
+	flex-direction: column;
+
+	border: 5px solid white;
+	border-radius: 6px;
+
+	width: 100%;
+	height: 100%;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
 }
 
 .loginfeedpage textarea {
 	border: none;
-	height: 95%;
-	width: 95%;
-	padding: 7px;
+	height: 100%;
+	width: 100%;
+	padding: 7px 180px 7px 7px;
+	resize: none;
+}
+.loginfeedpage textarea:focus-visible {
+	outline: none;
 }
 
 .loginfeedpage button {
-	float: right;
-}
+	position: absolute;
 
-.loginfeedpage button {
+	bottom: 5px;
 	background-image: linear-gradient(
 		to right,
 		#63d9a0 0%,
@@ -75,62 +118,116 @@
 	background-size: 200% auto;
 	border-radius: 5px;
 	border: none;
-	box-shadow: 0 0 20px #eee;
+	box-shadow: 0px 3px 4px rgb(165, 165, 165);
 	width: 150px;
-	height: 25px;
 
+	align-self: flex-end;
+	margin: 10px;
+	padding: 2px;
+	height: 32px;
 	display: block;
-	line-height: 5px;
 
 	text-align: center;
-	transition: 0.4s;
-
-	-moz-transition: 0.4s;
-	-ms-transition: 0.4s;
-	-o-transition: 0.4s;
-	-webkit-transition: 0.4s;
+	transition: 0.5s;
 	-webkit-transition: 0.5s;
 }
 .loginfeedpage button:hover {
 	background-position: right center;
 }
+.loginfeedpage button:active {
+	transition: 0.1s;
 
-.loginfeedpage .button-text,
-button {
-	color: white;
-	text-decoration: none;
-	font-weight: 500;
-	letter-spacing: 1px;
+	box-shadow: 0px 1px 2px rgb(160, 160, 160);
+	transform: translateY(2px);
 }
+
+.loginfeedpage #posts-container {
+	border-right: 1px solid rgb(156, 156, 156);
+	border-bottom: 1px solid rgb(156, 156, 156);
+	border-left: 1px solid rgb(156, 156, 156);
+	border-radius: 0 0 6px 6px;
+	margin: 0 10px;
+	min-height: 70vh;
+	max-height: 70vh;
+	overflow-y: auto;
+}
+
+.loginfeedpage .visiblefeedmsg {
+	color: rgb(110, 110, 110);
+	text-align: center;
+	margin: 40px;
+}
+.loginfeedpage .hiddenfeedmsg {
+	visibility: hidden;
+	height: 0;
+}
+
 .loginfeedpage .newpost {
-	border: 1px solid grey;
+	position: relative;
+	border: 1px solid rgb(177, 177, 177);
 	border-radius: 6px;
 	margin: 10px;
-	height: 200px;
+	padding: 20px;
+	-o-border-radius: 6px;
 }
 
-.loginfeedpage #newpostuser {
-	display: grid;
-	grid-template-columns: 1fr 6fr;
-	height: 100px;
-}
-
-.loginfeedpage #newpostpic {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: "10px";
-	height: "10px";
-}
-.loginfeedpage #newpostuserinfo {
+.loginfeedpage .newpost-user {
 	display: flex;
 	align-items: center;
 }
 
-.loginfeedpage #newpostcontent {
-	margin: 10px;
+.loginfeedpage .newpost-pic img {
+	width: 50px;
+	height: 50px;
+	margin: 0 6px;
 }
 
-.loginfeedpage #newpostdate {
-	font-size: 0.5rem;
+.loginfeedpage .newpost-userinfo {
+	display: flex;
+	align-items: center;
+}
+
+.loginfeedpage .newpost-username-text {
+	font-size: 24px;
+	font-weight: bold;
+	color: rgb(94, 94, 94);
+	padding: 4px 0;
+	margin-left: 20px;
+}
+.loginfeedpage .newpost-pronouns-text {
+	font-weight: 500;
+	color: rgb(151, 151, 151);
+	margin: 0 10px;
+	padding: 4px 0;
+}
+.loginfeedpage .newpost-bio {
+	padding: 10px 0;
+	max-width: 800px;
+}
+.loginfeedpage .newpost-bio-text {
+	padding: 5px 0;
+	font-size: 16px;
+	color: rgb(151, 151, 151);
+	overflow-wrap: break-word;
+}
+
+.loginfeedpage .newpost-namepronouns {
+	display: flex;
+
+	font-weight: 100;
+}
+
+.loginfeedpage .newpost-content {
+}
+
+.loginfeedpage .newpost-content p {
+	overflow-wrap: break-word;
+	margin-top: 10px;
+	margin-left: 84px;
+}
+
+.loginfeedpage .newpost-date p {
+	font-size: 1rem;
+	color: rgb(110, 110, 110);
+	margin-top: 20px;
 }
