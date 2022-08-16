@@ -2,8 +2,6 @@
 
 This is our group project for the Final Sprint (2nd Semester) at Keyin College's Software Development Program. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## SafeSpace: A Social Media App Mockup
 
 <br/>
