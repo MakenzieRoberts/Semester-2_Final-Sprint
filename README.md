@@ -2,7 +2,7 @@
 
 This is our group project for the Final Sprint (2nd Semester) at Keyin College's Software Development Program. 
 
-This project was bootstrapped with create-react-app. This repository holds the contents of it's 'src' folder.
+This project was bootstrapped with create-react-app. This repository holds the contents of our 'src' folder.
 
 Here's a [Live Demo](https://0lwyob.csb.app/).
 
