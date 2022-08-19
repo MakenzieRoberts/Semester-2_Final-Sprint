@@ -10,9 +10,6 @@
 }
 
 .loginpage ::-webkit-scrollbar {
-	-moz-border-radius: 0 10px 10px 0;
-	-ms-border-radius: 0 10px 10px 0;
-	-o-border-radius: 0 10px 10px 0;
 	-webkit-border-radius: 0 10px 10px 0;
 	border-radius: 0 10px 10px 0;
 	border: 5px solid white;
@@ -21,9 +18,6 @@
 }
 
 .loginpage ::-webkit-scrollbar-thumb {
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	background: #c2c9d2;
 	border-radius: 10px;
@@ -46,9 +40,6 @@
 	overflow-y: auto;
 	padding: 72px 0;
 	width: 18vw;
-	-moz-border-radius: 12px;
-	-ms-border-radius: 12px;
-	-o-border-radius: 12px;
 	-webkit-border-radius: 12px;
 	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
 }
@@ -112,7 +103,6 @@
 	font-size: 14px;
 	font-weight: 600;
 	font-family: Arial, Helvetica, sans-serif;
-
 	white-space: wrap;
 	max-width: 280px;
 }
@@ -129,7 +119,6 @@
 	border-radius: 5px;
 	border: none;
 	box-shadow: 0px 3px 4px rgb(165, 165, 165);
-
 	display: block;
 	line-height: 5px;
 	margin: 5% 0;
