@@ -19,6 +19,7 @@
 	height: 10px;
 	width: 8px;
 }
+
 .loginpage ::-webkit-scrollbar-thumb {
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -55,6 +56,7 @@
 .loginpage #form-title {
 	height: 50px;
 }
+
 .loginpage .form h2 {
 	font-size: 32pt;
 	white-space: nowrap;
@@ -67,6 +69,7 @@
 	padding: 5% 0;
 	width: 82%;
 }
+
 .loginpage input {
 	margin: 2px 0; /*Controls border gradient width*/
 	width: 98.5%;
@@ -82,9 +85,6 @@
 .signuppage button {
 	border-radius: 5px;
 	border: none;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
 
@@ -96,6 +96,7 @@
 .loginpage textarea[type="text"] {
 	padding: 10px;
 }
+
 .loginpage .gradient-border {
 	align-items: center;
 	background: -webkit-linear-gradient(top left, #63d9a0 0, #9e0de7 95%);
@@ -103,12 +104,9 @@
 	display: flex;
 	flex-direction: column;
 	margin: 10px 0;
-
-	-moz-border-radius: 6px;
-	-ms-border-radius: 6px;
-	-o-border-radius: 6px;
 	-webkit-border-radius: 6px;
 }
+
 .loginpage .inputs p {
 	color: red;
 	font-size: 14px;
@@ -140,9 +138,11 @@
 	width: 100%;
 	-webkit-transition: 0.5s;
 }
+
 .loginpage button:hover {
 	background-position: right center;
 }
+
 .loginpage button:active {
 	transition: 0.1s;
 	box-shadow: 0px 1px 2px rgb(160, 160, 160);
