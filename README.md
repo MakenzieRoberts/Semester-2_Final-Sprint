@@ -29,6 +29,12 @@ Here's a [Live Demo](https://0lwyob.csb.app/).
 
 ## Setup
 
+<hr/>
+
+This project is now [uploaded to GitHub in it's entirety](https://github.com/MakenzieRoberts/SafeSpace_React_App), not just the 'src' folder - (This makes setup a lot easier).
+
+<hr/>
+
  1. Create a new React application using create-react-app. 
  
 	```
@@ -82,15 +88,8 @@ Here's a [Live Demo](https://0lwyob.csb.app/).
 	```
 <br/>
 
-<hr/>
-Eventually this project will be uploaded to GitHub in it's entirety, not just the 'src' folder - (This will make setup a lot easier).
 
-When that happens, a link to the repository containing the whole project folder + instructions will be placed here. 
 
-In the meantime, you can [view a live demo of this project here](https://0lwyob.csb.app/).
-<hr/>
-
-<br/>
 
 ## Contributers:
 
