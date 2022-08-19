@@ -1,6 +1,12 @@
+// Project by: Kara Balsom, Makenzie Roberts, & David Turner
+//Date Written: August 8, 2022
+//File Name: Team1_Sprint2.zip
+
+//Import needed components
 import React from "react";
 import "../stylesheets/userinfo.css";
 import { useState, useEffect } from "react";
+
 function UserInfo(props) {
 	const [pronounsFormat, setPronounsFormat] = useState(props.value2);
 
