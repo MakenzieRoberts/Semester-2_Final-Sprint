@@ -23,7 +23,7 @@ function App() {
 	return (
 		<div className="App">
 			<div className="container">
-				{/* <Logo /> */}
+		
 				<Router>
 					<Routes>
 						<Route path="/" element={<SignUpPage />} />
