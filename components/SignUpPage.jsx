@@ -12,13 +12,16 @@ import { useNavigate } from "react-router-dom";
 const SignUpPage = () => {
 	const initialValues = { email: "", password: "" };
 
-	//   pass initialvalues to this state, then onChange update the formValues with user input
+	//		Pass initialvalues to this state, then onChange update the formValues with user input.
 	const [formValues, setFormValues] = useState(initialValues);
 
-	//   in formErrors, setFormErrors we would be receiving props/values back in from the handleSubmit function that calls the validate function, const errors = {} in the validate function returns a value; , useState is set to an empty object {} originally
+	//   	In formErrors, setFormErrors we would be receiving props/values back from the handleSubmit
+	//		function that calls the validate function.
+	//		const errors = {} in the validate function returns a value; , useState is set to an empty
+	//		object {} originally.
 	const [formErrors, setFormErrors] = useState({});
 
-	// setting a flag to be used as booleen
+	// 		Setting a flag to be used as boolean.
 	const [isSubmit, setIsSubmit] = useState(false);
 
 	const navigateToProfile = () => {
@@ -26,39 +29,45 @@ const SignUpPage = () => {
 	};
 	const navigate = useNavigate();
 
-	//   FIRST FUNCTION CREATED: function from the onchange in the input element to set the new values input by user, using an "e" for add event
+	//   	This function is triggered by onChange in the input element, to set the new values input by
+	//		user, using an "e" for add event.
 	const handleChange = (e) => {
-		// console.log(e.target);
 		const { name, value } = e.target;
-		//set the form values(setFormValues) is an object ({}) so first take all the initialState using (...) so it will = the formValues, [name] this in square brackets makes it a "key" and assign the entered value to this key, value is a key word to get the value of name
+		//		Set the form values(setFormValues) is an object ({}) so first take all the 'initialState'
+		//		using (...), so it will = the formValues.
+		//		- [name] this in square brackets makes it a "key" and assign the entered value to this key.
+		//		- Value is a key word to get the value of name.
 		setFormValues({ ...formValues, [name]: value });
 
 		console.log(formValues);
 	};
 
-	//   SECOND FUNCTION CREATED:
 	const handleSubmit = (e) => {
-		// e.prevent.Default; prevents the page from page from being refreshed
+		// 		e.prevent.Default; prevents the page from page from being refreshed.
 		e.preventDefault();
-		// whenever a user submits a form the program is going to call the "validate" function that will pass all the formValues, which ever occours it will be "set" in the formErrors which is an object that was returned from the validate function ==> return errors to const errors={}
+		// 		Whenever a user submits a form the program is going to call the "validate" function that will
+		//		pass all the formValues. Whichever occurs will be "set" in the formErrors which is an
+		//		object that was returned from the validate function ('return errors' to 'const errors={}')
 		setFormErrors(validate(formValues));
 		setIsSubmit(true);
 	};
 
 	useEffect(() => {
-		// console.log(formErrors);
-		console.log(Object.keys(formErrors).length);
-
+		// 		(If there are no form errors, and isSubmit is true)...
 		if (Object.keys(formErrors).length === 0 && isSubmit) {
+			//		Then navigate to the next page.
 			navigateToProfile();
 			console.log(formValues);
 		} // eslint-disable-next-line
 	}, [formErrors]);
-	//   THIRD FUNCTION CREATED: the validate function, validate = (values), values is take all the form values which have be submitted
+
+	//		The validate function.
+	//		validate = (values), values is take all the form values which have be submitted.
 	const validate = (values) => {
-		// const errors is an errors object which is the initial object
+		// 'const errors' is an errors object which is the initial object.
 		const errors = {};
 		console.log(errors);
+		// Email and password validation
 		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 		const regexPass =
 			/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/i;
@@ -82,7 +91,9 @@ const SignUpPage = () => {
 	return (
 		<div className="signuppage">
 			<Logo />
-			{/* so here I wanted to see all the values so I used an onSubmit listener and called it handleSubmit */}
+			{/*		Here I wanted to see all the values so I used an onSubmit listener and called it 
+					'handleSubmit'
+			*/}
 			<form className="form" onSubmit={handleSubmit}>
 				<div id="form-title">
 					<h1>Sign Up</h1>
@@ -94,32 +105,33 @@ const SignUpPage = () => {
 							type="email"
 							placeholder="E-mail"
 							value={formValues.email}
-							// below, to update and handle the value passed in by a user, using onChange and making a function called handleChange
+							// 		Below, to update and handle the value passed in by a user, using
+							//		onChange and making a function called 'handleChange'.
 							onChange={handleChange}
 						/>
 					</div>
+					{/* 
+							If an error occurs, the message shows up here inside <p>.
+					*/}
 					<p>{formErrors.email}</p>
 					<div className="gradient-border">
 						<input
 							name="password"
-							//   changed this from "text" to "password"
+							//   	Changed this from "text" to "password"
 							type="password"
 							placeholder="Password"
-							//   this binds the initialValues to this input
+							//   	This binds the initialValues to this input
 							value={formValues.password}
-							// below, to update and handle the value passed in by a user, using onChange and making a function called handleChange
+							// 		Below, to update and handle the value passed in by a user, using
+							//		onChange and making a function called 'handleChange'.
 							onChange={handleChange}
 						/>
 					</div>
+					{/* 
+							If an error occurs, the message shows up here inside <p>.
+					*/}
 					<p>{formErrors.password}</p>
-
-					{/* I stripped out the link to show the errors */}
 					<button className="button-text">Sign Up</button>
-
-					{/* original below */}
-					{/* <Link className="button-text" to="/signup/createprofile">
-            <button>Sign Up</button>
-          </Link> */}
 				</div>
 				<div id="login-message">
 					<p>
@@ -135,15 +147,3 @@ const SignUpPage = () => {
 };
 
 export default SignUpPage;
-
-// {
-//   /* <div className="signuppage">
-// 	<h1>Sign Up</h1>
-// 	<input type="text" placeholder="E-mail" />
-// 	<input type="text" placeholder="Password" />
-
-// 	<Link to="/signup/createprofile">Sign Up</Link>
-// 	<h2> Already have an account?</h2>
-// 	<h1>Login</h1>
-// </div>; */
-// }
