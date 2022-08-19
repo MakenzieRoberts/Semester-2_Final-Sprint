@@ -14,9 +14,9 @@
 	padding: 4px 0;
 }
 .userinfo #pronouns-text {
+	color: rgb(151, 151, 151);
 	font-size: 18px;
 	font-weight: 500;
-	color: rgb(151, 151, 151);
 	margin: 0 10px;
 	padding: 4px 0;
 }
@@ -24,14 +24,13 @@
 	max-width: 800px;
 }
 .userinfo #bio-text {
-	padding: 5px 0;
-	font-size: 16px;
 	color: rgb(151, 151, 151);
+	font-size: 16px;
 	overflow-wrap: break-word;
+	padding: 5px 0;
 }
 
 .userinfo #namepronouns {
 	display: flex;
-
 	font-weight: 100;
 }
