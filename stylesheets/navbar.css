@@ -3,19 +3,19 @@
 .navbar {
 	font-size: 1.5rem;
 	font-weight: 400;
-	text-align: center;
 	margin-top: 50%;
+	text-align: center;
 }
 .navbar #nav-links {
 	display: flex;
 	flex-direction: column;
 }
 .navbar a {
+	color: white;
 	margin: 10px;
 	text-decoration: none;
-	color: white;
 }
 .navbar a:visited {
-	text-decoration: none;
 	color: white;
+	text-decoration: none;
 }

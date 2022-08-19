@@ -1,19 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
 .profilepage {
-	display: flex;
-	scrollbar-width: thin;
-	justify-content: center;
 	align-items: center;
-
+	display: flex;
 	height: 100%;
+	justify-content: center;
 	min-height: 100%;
+	scrollbar-width: thin;
 }
 
 .profilepage ::-webkit-scrollbar {
-	-moz-border-radius: 0 10px 10px 0;
-	-ms-border-radius: 0 10px 10px 0;
-	-o-border-radius: 0 10px 10px 0;
 	-webkit-border-radius: 0 10px 10px 0;
 	border-radius: 0 10px 10px 0;
 	border: 5px solid white;
@@ -21,15 +17,14 @@
 	width: 8px;
 }
 .profilepage ::-webkit-scrollbar-thumb {
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	background: #c2c9d2;
 	border-radius: 10px;
 }
 
 .profilepage .form {
+	-webkit-border-radius: 12px;
+	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
 	align-items: center;
 	background-color: white;
 	border-bottom: 4px solid transparent;
@@ -46,8 +41,6 @@
 	overflow-y: auto;
 	padding: 57px 0;
 	width: 18vw;
-	-webkit-border-radius: 12px;
-	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
 }
 
 .profilepage #form-title {
@@ -55,28 +48,27 @@
 }
 .profilepage .form h1 {
 	font-size: 28pt;
-	white-space: nowrap;
 	padding: 0 40px;
+	white-space: nowrap;
 }
 
 .profilepage .inputs {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-
 	width: 82%;
 }
 .profilepage input,
 .profilepage textarea {
-	margin: 2px 0px;
 	/*Controls border gradient width*/
+	margin: 2px 0px;
 	width: 98.5%;
 }
 .profilepage textarea {
-	max-width: 274px;
-	min-width: 98%;
 	max-height: 200px;
+	max-width: 274px;
 	min-height: 72px;
+	min-width: 98%;
 }
 
 .profilepage input[type="text"] {
@@ -95,12 +87,9 @@
 .profilepage input,
 .profilepage textarea,
 .profilepage button {
+	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	border: none;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
-	-webkit-border-radius: 5px;
 }
 
 .profilepage input:focus-visible {
@@ -117,30 +106,26 @@
 }
 
 .profilepage .gradient-border {
+	-webkit-border-radius: 6px;
 	align-items: center;
 	background: -webkit-linear-gradient(top left, #63d9a0 0, #9e0de7 95%);
 	border-radius: 6px;
 	display: flex;
 	flex-direction: column;
 	margin: 10px 0;
-
-	-moz-border-radius: 6px;
-	-ms-border-radius: 6px;
-	-o-border-radius: 6px;
-	-webkit-border-radius: 6px;
 }
 
 .profilepage .inputs p {
 	color: red;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: 600;
-	font-family: Arial, Helvetica, sans-serif;
-
-	white-space: wrap;
 	max-width: 280px;
+	white-space: wrap;
 }
 
 .profilepage button {
+	-webkit-transition: 0.5s;
 	background-image: linear-gradient(
 		to right,
 		#63d9a0 0%,
@@ -151,22 +136,20 @@
 	border-radius: 5px;
 	border: none;
 	box-shadow: 0px 3px 4px rgb(165, 165, 165);
-
 	display: block;
 	line-height: 5px;
 	margin: 5% 0;
 	text-align: center;
 	transition: 0.5s;
 	width: 100%;
-	-webkit-transition: 0.5s;
 }
 .profilepage button:hover {
 	background-position: right center;
 }
 .profilepage button:active {
-	transition: 0.1s;
 	box-shadow: 0px 1px 2px rgb(160, 160, 160);
 	transform: translateY(2px);
+	transition: 0.1s;
 }
 
 @media screen and (max-height: 300px) {

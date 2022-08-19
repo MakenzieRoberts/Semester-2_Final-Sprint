@@ -106,8 +106,8 @@
 }
 
 .feedpage button {
-	position: absolute;
-	bottom: 5px;
+	-webkit-transition: 0.5s;
+	align-self: flex-end;
 	background-image: linear-gradient(
 		to right,
 		#63d9a0 0%,
@@ -117,16 +117,16 @@
 	background-size: 200% auto;
 	border-radius: 5px;
 	border: none;
+	bottom: 5px;
 	box-shadow: 0px 3px 4px rgb(165, 165, 165);
-	width: 150px;
-	align-self: flex-end;
+	display: block;
+	height: 32px;
 	margin: 10px;
 	padding: 2px;
-	height: 32px;
-	display: block;
+	position: absolute;
 	text-align: center;
 	transition: 0.5s;
-	-webkit-transition: 0.5s;
+	width: 150px;
 }
 
 .feedpage button:hover {
@@ -134,84 +134,83 @@
 }
 
 .feedpage button:active {
-	transition: 0.1s;
-
 	box-shadow: 0px 1px 2px rgb(160, 160, 160);
 	transform: translateY(2px);
+	transition: 0.1s;
 }
 
 .feedpage #posts-container {
-	border-right: 1px solid rgb(156, 156, 156);
 	border-bottom: 1px solid rgb(156, 156, 156);
 	border-left: 1px solid rgb(156, 156, 156);
 	border-radius: 0 0 6px 6px;
+	border-right: 1px solid rgb(156, 156, 156);
 	margin: 0 10px;
-	min-height: 70vh;
 	max-height: 70vh;
+	min-height: 70vh;
 	overflow-y: auto;
 }
 
 .feedpage .visiblefeedmsg {
 	color: rgb(110, 110, 110);
-	text-align: center;
 	margin: 40px;
+	text-align: center;
 }
 
 .feedpage .hiddenfeedmsg {
-	visibility: hidden;
 	height: 0;
+	visibility: hidden;
 }
 
 .feedpage .newpost {
-	position: relative;
-	border: 1px solid rgb(177, 177, 177);
+	-webkit-border-radius: 6px;
 	border-radius: 6px;
+	border: 1px solid rgb(177, 177, 177);
 	margin: 10px;
 	padding: 20px;
-	-webkit-border-radius: 6px;
+	position: relative;
 }
 
 .feedpage .newpost-user {
-	display: flex;
 	align-items: center;
+	display: flex;
 }
 
 .feedpage .newpost-pic img {
-	width: 50px;
 	height: 50px;
 	margin: 0 6px;
+	width: 50px;
 }
 
 .feedpage .newpost-userinfo {
-	display: flex;
 	align-items: center;
+	display: flex;
 }
 
 .feedpage .newpost-username-text {
+	color: rgb(94, 94, 94);
 	font-size: 24px;
 	font-weight: bold;
-	color: rgb(94, 94, 94);
-	padding: 4px 0;
 	margin-left: 20px;
+	padding: 4px 0;
 }
 
 .feedpage .newpost-pronouns-text {
-	font-weight: 500;
 	color: rgb(151, 151, 151);
+	font-weight: 500;
 	margin: 0 10px;
 	padding: 4px 0;
 }
 
 .feedpage .newpost-bio {
-	padding: 10px 0;
 	max-width: 800px;
+	padding: 10px 0;
 }
 
 .feedpage .newpost-bio-text {
-	padding: 5px 0;
-	font-size: 16px;
 	color: rgb(151, 151, 151);
+	font-size: 16px;
 	overflow-wrap: break-word;
+	padding: 5px 0;
 }
 
 .feedpage .newpost-namepronouns {
@@ -220,13 +219,13 @@
 }
 
 .feedpage .newpost-content p {
-	overflow-wrap: break-word;
-	margin-top: 10px;
 	margin-left: 84px;
+	margin-top: 10px;
+	overflow-wrap: break-word;
 }
 
 .feedpage .newpost-date p {
-	font-size: 1rem;
 	color: rgb(110, 110, 110);
+	font-size: 1rem;
 	margin-top: 20px;
 }

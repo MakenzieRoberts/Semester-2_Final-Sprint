@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
 .loginpage {
-	display: flex;
-	scrollbar-width: thin;
-	justify-content: center;
 	align-items: center;
+	display: flex;
 	height: 100%;
+	justify-content: center;
 	min-height: 100%;
+	scrollbar-width: thin;
 }
 
 .loginpage ::-webkit-scrollbar {
@@ -24,6 +24,8 @@
 }
 
 .loginpage .form {
+	-webkit-border-radius: 12px;
+	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
 	align-items: center;
 	background-color: white;
 	border-bottom: 4px solid transparent;
@@ -40,8 +42,6 @@
 	overflow-y: auto;
 	padding: 72px 0;
 	width: 18vw;
-	-webkit-border-radius: 12px;
-	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
 }
 
 .loginpage #form-title {
@@ -63,8 +63,8 @@
 
 .loginpage input {
 	margin: 2px 0; /*Controls border gradient width*/
-	width: 98.5%;
 	padding: 0 10px;
+	width: 98.5%;
 }
 
 .loginpage input,
@@ -74,9 +74,9 @@
 
 .loginpage input,
 .signuppage button {
+	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	border: none;
-	-webkit-border-radius: 5px;
 }
 
 .loginpage input:focus-visible {
@@ -89,32 +89,32 @@
 }
 
 .loginpage .gradient-border {
+	-webkit-border-radius: 6px;
 	align-items: center;
 	background: -webkit-linear-gradient(top left, #63d9a0 0, #9e0de7 95%);
 	border-radius: 6px;
 	display: flex;
 	flex-direction: column;
 	margin: 10px 0;
-	-webkit-border-radius: 6px;
 }
 
 .loginpage .inputs p {
 	color: red;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: 600;
-	font-family: Arial, Helvetica, sans-serif;
-	white-space: wrap;
 	max-width: 280px;
+	white-space: wrap;
 }
 
 .loginpage button {
+	-webkit-transition: 0.5s;
 	background-image: linear-gradient(
 		to right,
 		#63d9a0 0%,
 		#9e0de7 50%,
 		#63d9a0 100%
 	);
-
 	background-size: 200% auto;
 	border-radius: 5px;
 	border: none;
@@ -125,7 +125,6 @@
 	text-align: center;
 	transition: 0.5s;
 	width: 100%;
-	-webkit-transition: 0.5s;
 }
 
 .loginpage button:hover {
@@ -133,14 +132,13 @@
 }
 
 .loginpage button:active {
-	transition: 0.1s;
 	box-shadow: 0px 1px 2px rgb(160, 160, 160);
 	transform: translateY(2px);
+	transition: 0.1s;
 }
 
 .loginpage #signup-message p {
 	padding: 8px 30px;
-
 	text-align: center;
 }
 

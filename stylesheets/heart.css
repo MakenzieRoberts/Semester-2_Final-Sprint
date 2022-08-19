@@ -1,13 +1,13 @@
 .heart-img {
-	position: absolute;
 	bottom: 15px;
-	right: 15px;
-	max-width: 24px;
-	height: auto;
 	filter: drop-shadow(0px 2px 1.5px rgb(129, 129, 129));
+	height: auto;
+	max-width: 24px;
+	position: absolute;
+	right: 15px;
 }
 
 .heart-img:active {
-	transform: translateY(2px);
 	filter: drop-shadow(0px 1px 2px rgb(160, 160, 160));
+	transform: translateY(2px);
 }

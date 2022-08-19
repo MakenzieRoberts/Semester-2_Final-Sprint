@@ -1,9 +1,9 @@
 @import "./reset.css";
 
 .logo-area img {
+	margin: 1.5% 0 0 1.5%;
 	position: absolute;
 	top: 0;
-	margin: 1.5% 0 0 1.5%;
 	width: 18%;
 }
 
