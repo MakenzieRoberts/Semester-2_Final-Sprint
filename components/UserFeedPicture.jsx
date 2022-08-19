@@ -7,6 +7,7 @@ import "../stylesheets/userfeedpicture.css";
 import useravatar from "../images/useravatar.png";
 
 function UserFeedPicture() {
+	//		This function returns the user image.
 	return <img className="userfeedpicture" src={useravatar} alt="Avatar" />;
 }
 

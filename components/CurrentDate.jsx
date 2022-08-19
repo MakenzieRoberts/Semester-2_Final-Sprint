@@ -6,6 +6,7 @@
 import React from "react";
 
 export default function CurrDate() {
+	// 		This function gets the current data and formats how it will display
 	const current = new Date();
 	const date = `${current.getDate()} ${current.getFullYear()}, ${current.getHours()}:${String(
 		current.getMinutes()

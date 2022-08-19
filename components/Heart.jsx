@@ -10,6 +10,7 @@ import heartfull from "../images/heart-full.png";
 import { useState } from "react";
 
 function Heart() {
+	//		This function 'fills in' the Like button (heart image) when clicked.
 	const [heart, setHeart] = useState(heartempty);
 	const changeHeart = (e) => {
 		if (heart === heartempty) {

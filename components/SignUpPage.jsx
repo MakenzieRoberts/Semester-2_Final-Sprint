@@ -34,6 +34,7 @@ const SignUpPage = () => {
 	//		user, using an "e" for add event.
 	const handleChange = (e) => {
 		const { name, value } = e.target;
+
 		//		Set the form values(setFormValues) is an object ({}) so first take all the 'initialState'
 		//		using (...), so it will = the formValues.
 		//		- [name] this in square brackets makes it a "key" and assign the entered value to this key.
@@ -46,6 +47,7 @@ const SignUpPage = () => {
 	const handleSubmit = (e) => {
 		// 		e.prevent.Default; prevents the page from page from being refreshed.
 		e.preventDefault();
+
 		// 		Whenever a user submits a form the program is going to call the "validate" function that will
 		//		pass all the formValues. Whichever occurs will be "set" in the formErrors which is an
 		//		object that was returned from the validate function ('return errors' to 'const errors={}')
@@ -58,7 +60,6 @@ const SignUpPage = () => {
 		if (Object.keys(formErrors).length === 0 && isSubmit) {
 			//		Then navigate to the next page.
 			navigateToProfile();
-			console.log(formValues);
 		} // eslint-disable-next-line
 	}, [formErrors]);
 
@@ -68,6 +69,7 @@ const SignUpPage = () => {
 		// 'const errors' is an errors object which is the initial object.
 		const errors = {};
 		console.log(errors);
+
 		// Email and password validation
 		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 		const regexPass =

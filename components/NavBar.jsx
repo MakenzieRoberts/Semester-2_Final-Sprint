@@ -5,14 +5,16 @@
 
 import React from "react";
 import "../stylesheets/navbar.css";
-
+import { Link } from "react-router-dom";
 function NavBar() {
 	return (
 		<div className="navbar">
+			{/* 
+			Faux 'nav links' for display only 
+			*/}
 			<div id="nav-links">
-				<a href="#">Home</a>
-
-				<a href="#">Explore</a>
+				<Link to="#">Home</Link>
+				<Link to="#">Explore</Link>
 			</div>
 		</div>
 	);

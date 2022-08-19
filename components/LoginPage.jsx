@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+	// 		For detailed comments on this validation method, refer to SignUpPage.jsx / ProfilePage.jsx
 	const initialValues = { email: "", password: "" };
 
 	const [formValues, setFormValues] = useState(initialValues);

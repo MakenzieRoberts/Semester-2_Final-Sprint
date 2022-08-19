@@ -7,6 +7,8 @@ import "../stylesheets/signuppage.css";
 import "../stylesheets/logo.css";
 import logo from "../images/logo.png";
 function Logo() {
+	//		This function returns the logo image.
+
 	return (
 		<>
 			<div className="logo-area">

@@ -23,29 +23,31 @@ function FeedPage({ username, pronouns, bio }) {
 	useEffect(() => {
 		if (pronounsFormat.length !== 0) {
 			setPronounsFormat(`(${pronouns})`);
-		}
+		} // eslint-disable-next-line
 	}, []);
 
+	//		Function to hide message that appears while feed is empty
 	const changeMsgStyle = () => {
-		console.log("you just clicked");
-
 		setMsgStyle("hiddenfeedmsg");
 	};
-
+	// 		This function runs when the new post form is submitted.
 	function sendData(e) {
+		//		Post validation, hides empty feed message, sets post state
 		empty(post);
-
+		//		Clears input field
 		clearFields();
 
 		e.preventDefault();
 	}
-
+	//		Post validation, hides empty feed message, sets post state
 	const empty = (post) => {
 		if (!post) {
 			alert("Post cannot be blank.");
 			return;
 		}
+		//		 Hides empty feed message
 		changeMsgStyle();
+		//		 Sets post state
 		setPosts([post, ...posts]);
 	};
 
@@ -55,6 +57,7 @@ function FeedPage({ username, pronouns, bio }) {
 				{posts.map((post) => {
 					return (
 						<>
+							{/* *************************** New Post User Info *************************** */}
 							<div className="newpost">
 								<div className="newpost-user">
 									<div className="newpost-pic">
@@ -69,14 +72,24 @@ function FeedPage({ username, pronouns, bio }) {
 										</div>
 									</div>
 								</div>
-
+								{/* **************************** New Post Content **************************** */}
 								<div className="newpost-content">
+									{/* 
+											Post Display
+									*/}
 									<p>{post}</p>
 
+									{/* 
+											Date Display
+									*/}
 									<div className="newpost-date">
 										<CurrDate />
 									</div>
 								</div>
+
+								{/* 
+										Like Button Component
+								*/}
 								<Heart />
 							</div>
 						</>
@@ -87,12 +100,14 @@ function FeedPage({ username, pronouns, bio }) {
 	}
 
 	return (
+		/* ******************************** Feed JSX ******************************** */
 		<div className="feedpage">
 			<div className="nav">
 				<Logo />
 				<NavBar />
 			</div>
 			<div className="feed">
+				{/* ************************** User Information Area ************************* */}
 				<div id="user">
 					<div id="userpicture">
 						<UserPicture />
@@ -101,6 +116,7 @@ function FeedPage({ username, pronouns, bio }) {
 						<UserInfo value1={username} value2={pronouns} value3={bio} />
 					</div>
 				</div>
+				{/* ************************** Create New Post Area ************************** */}
 				<div id="newpost-container">
 					<div className="gradient-border">
 						<div className="form-container">
@@ -114,7 +130,9 @@ function FeedPage({ username, pronouns, bio }) {
 										setPost(e.target.value);
 									}}
 								/>
-
+								{/* 
+										Submit Button
+								 */}
 								<button className="button-text" type="submit">
 									Post
 								</button>
@@ -122,6 +140,7 @@ function FeedPage({ username, pronouns, bio }) {
 						</div>
 					</div>
 				</div>
+				{/* ******************************** Feed Area ******************************* */}
 				<div id="posts-container">
 					<p className={feedMsgStyle}>
 						Looks like you don't have any posts to show.
@@ -132,6 +151,7 @@ function FeedPage({ username, pronouns, bio }) {
 		</div>
 	);
 
+	//		Clears new post input after submittal
 	function clearFields() {
 		setPost("");
 	}
