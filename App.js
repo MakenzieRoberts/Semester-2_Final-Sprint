@@ -1,6 +1,10 @@
+// Project by: Kara Balsom, Makenzie Roberts, & David Turner
+//Date Written: August 8, 2022
+//File Name: Team1_Sprint2.zip
+
+/Import necessary components and stylesheets
 import "./stylesheets/reset.css";
 import "./app.css";
-
 import SignUpPage from "./components/SignUpPage";
 import ProfilePage from "./components/ProfilePage";
 import FeedPage from "./components/FeedPage";
@@ -10,12 +14,13 @@ import LoginFeedPage from "./components/LoginFeedPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
+// Create App Function
 function App() {
 	const [username, setUsername] = useState("");
 	const [pronouns, setPronouns] = useState("");
 	const [bio, setBio] = useState("");
 
-	function handleUserInfo(un, pp, bb) {
+		function handleUserInfo(un, pp, bb) {
 		setUsername(un);
 		setPronouns(pp);
 		setBio(bb);
