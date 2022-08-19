@@ -1,3 +1,7 @@
+// Project by: Kara Balsom, Makenzie Roberts, & David Turner
+//Date Written: August 8, 2022
+//File Name: Team1_Sprint2.zip
+
 import "../stylesheets/profilepage.css";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
