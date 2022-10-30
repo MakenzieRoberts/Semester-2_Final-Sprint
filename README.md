@@ -47,7 +47,7 @@ This project is now [uploaded to GitHub in it's entirety](https://github.com/Mak
 	cd your-project-name
 	```
 	
- 3. Install Dependacies
+ 3. Install Dependencies
  
 	```
 	npm install react-router-dom
