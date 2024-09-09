@@ -12,7 +12,6 @@ Here's a [Live Demo](https://0lwyob.csb.app/).
 <br/>
 
  - 🌐 Built for Chrome
- - ❌ **NOT** built for mobile portrait mode ⁽ʸᵉᵗ⁾
  
 <br/>
 
